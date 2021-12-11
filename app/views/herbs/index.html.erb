@@ -1,0 +1,16 @@
+<div class="home">
+  <h1>Fav Herbs</h1>
+  <div class="home__card-wrapper">
+    <% @herbs.each do |herb| %>
+      <% if herb.name %>
+        <div class="home__card">
+          <%= link_to herb_path(herb), :class => 'home__card-inner' do %>
+            <h3 class="home__name"><%= herb.name %></h3>
+            <p class="home__description"><%= herb.description %></p>
+            <p class="home__more">Read more &#8594;</p>
+          <% end %>
+        </div>
+      <% end %>
+    <% end %>
+  </div>
+</div>

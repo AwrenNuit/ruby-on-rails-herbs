@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>RailsTest</title>
+    <title>Herbs</title>
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
@@ -9,6 +9,28 @@
   </head>
 
   <body>
-    <%= yield %>
+    <nav class="nav">
+      <div class="nav__inner">
+        <div class="nav__left">
+          <span class="nav__logo">
+            <%= link_to "Home", home_path %>
+          </span>
+        </div>
+        <div class="nav__right">
+          <ul class="nav__menu">
+            <li class="nav__menu-item">
+              <%= link_to "Home", home_path %>
+            </li>
+            <li class="nav__menu-item">
+              <%= link_to "Add Herb", new_herb_path %>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="content">
+      <%= yield %>
+    </div>
   </body>
 </html>
