@@ -1,5 +1,11 @@
 <div class="herb">
-  <h2 class="herb__name"><%= @herb.name %></h2>
+  <div class="herb__top">
+    <h2 class="herb__name"><%= @herb.name %></h2>
+    <div class="herb__actions">
+      <%= link_to 'Edit', edit_herb_path(@herb), :class => 'herb__action-btn herb__action-btn--edit' %>
+      <%= link_to 'Delete', herb_path(@herb), method: :delete, data: {confirm: 'Delete this herb?'}, :class => 'herb__action-btn herb__action-btn--delete' %>
+    </div>
+  </div>
   <div class="herb__description-wrapper">
     <p class="herb__description"><%= @herb.description %></p>
   </div>

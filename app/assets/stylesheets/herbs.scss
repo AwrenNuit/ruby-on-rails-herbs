@@ -124,7 +124,8 @@
   }
 }
 
-.add {
+.add,
+.edit {
   background: linear-gradient(344deg, #daa520 0%, #97ffdf 100%);
   background-position: 50%;
   background-size: 400%;
@@ -157,11 +158,20 @@
   }
 
   &__submit {
+    background-color: #e9e9ed;
     border: 1px solid #808080;
     border-radius: 4px;
     cursor: pointer;
     padding: 5px 10px;
     transition: 0.3s;
+    
+    &:hover {
+      background-color: darken(#e9e9ed, 5%);
+    }
+
+    &:active {
+      background-color: darken(#e9e9ed, 10%);
+    }
   }
 }
 
@@ -172,6 +182,40 @@
   min-height: 100vh;
   padding: 30px;
   width: 100%;
+
+  &__top {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__actions {
+    display: flex;
+  }
+
+  &__action-btn {
+    background-color: #e9e9ed;
+    border: 1px solid #808080;
+    border-radius: 4px;
+    color: #000;
+    cursor: pointer;
+    height: max-content;
+    margin-right: 10px;
+    padding: 5px 10px;
+    text-decoration: none;
+    transition: 0.3s;
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    &:hover {
+      background-color: darken(#e9e9ed, 5%);
+    }
+
+    &:active {
+      background-color: darken(#e9e9ed, 10%);
+    }
+  }
 
   &__name {
     margin: 0;

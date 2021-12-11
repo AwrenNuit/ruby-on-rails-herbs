@@ -1,5 +1,5 @@
 <div class="add">
-  <h1>Add herb</h1>
+  <h1>Add Herb</h1>
   <%= form_for :herb, :html => {:class => 'add__form'}, url: herbs_path do |f| %>
     <% if @herb.errors.any? %>
       <%# loop %>
@@ -22,7 +22,7 @@
     </div>
 
     <div class="add__field-wrapper">
-    <%= f.submit(:class => 'add__submit') %>
-  </div>
+      <%= f.submit(:class => 'add__submit') %>
+    </div>
   <% end %>
 </div>
